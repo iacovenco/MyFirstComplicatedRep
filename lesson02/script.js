@@ -45,7 +45,7 @@ switch (days) {
 }
 
 //2
-let namePerson = "Артем";
+const namePerson = "Илья";
 
 let role =
   namePerson === "Артем"
