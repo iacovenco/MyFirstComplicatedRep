@@ -1,41 +1,5 @@
-//1a
-
-let lang = "ru";
-
-if (lang === "ru") {
-  console.log(
-    "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
-  );
-} else if (lang === "en") {
-  console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
-} else {
-  console.log("Неверное значение ");
-}
-
-//1b
-
-let langTwo = "en";
-
-switch (langTwo) {
-  case "ru":
-    console.log(
-      "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
-    );
-    break;
-  case "en":
-    console.log(
-      "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
-    );
-    break;
-  default:
-    console.log("Неверное значение ");
-    break;
-}
-
-//1c
-let langThree = "ru";
-
-let week = {
+//1
+const week = {
   ru: [
     "Понедельник",
     "Вторник",
@@ -56,12 +20,28 @@ let week = {
   ],
 };
 
-let days = week[langThree];
+let lang = "ru";
+
+let days = week[lang];
 
 if (days) {
   console.log(days.join(", "));
 } else {
-  console.log("Неверное значение ");
+  console.log("Неверное значение");
+}
+
+//1b
+
+lang = "en";
+
+days = week[lang];
+
+switch (days) {
+  case days:
+    console.log(days.join(", "));
+    break;
+  default:
+    console.log("Неверное значение");
 }
 
 //2
