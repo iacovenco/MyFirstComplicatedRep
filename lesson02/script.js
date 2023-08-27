@@ -1,16 +1,20 @@
-const formatString = function (str) {
+function formatString(str) {
   if (typeof str !== "string") {
-    alert("здесь должна быть строка");
-    return;
+    return alert("Аргумент должен быть строкой");
   }
 
-  let trimmedStr = str.trim();
+  let trimStr = str.trim();
 
-  if (trimmedStr.length > 30) {
-    trimmedStr = trimmedStr.slice(0, 30) + "...";
+  if (trimStr.length > 30) {
+    trimStr = trimStr.slice(0, 30) + "...";
   }
+  return trimStr;
+}
 
-  return trimmedStr;
-};
-
-console.log(formatString("123dsfdsdfsddfdsfdsfdsfdsfdsfsdfds"));
+console.log(formatString("строка"));
+console.log(formatString(123));
+console.log(
+  formatString(
+    "JDBSDJFDSJBFFFCJBDSCJBKSDAFJKBCDSJKBCDSJKBCJBKSDJKCBSDJBCKSDBDJKC"
+  )
+);
