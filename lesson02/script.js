@@ -1,21 +1,31 @@
-let arr = ["526", "473", "739", "549", "474", "277", "624"];
-console.log(arr[1]);
-console.log(arr[4]);
-console.log(arr[5]);
-console.log(arr[1], arr[4], arr[5]);
+function displayWeek() {
+  const week = [
+    "Воскресенье",
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+  ];
+  const today = new Date().getDay();
 
-for (let i = 1; i <= 100; i++) {
-  let digit = true;
+  const weekday = document.getElementById("weekdays-container");
 
-  for (let a = 2; a < i; a++) {
-    if (i % a === 0) {
-      digit = false;
-      break;
+  for (let i = 0; i < week.length; i++) {
+    const dayElement = document.createElement("div");
+    dayElement.textContent = week[i];
+
+    if (i === today) {
+      dayElement.classList.add("weekdays");
     }
-  }
 
-  if (digit) {
-    let divisors = "1 и " + i;
-    console.log(i, "Делители этого числа:", divisors);
+    if (i === 0 || i === 6) {
+      dayElement.classList.add("weekends");
+    }
+
+    weekday.appendChild(dayElement);
   }
 }
+
+displayWeek();
